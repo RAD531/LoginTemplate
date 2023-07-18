@@ -108,11 +108,18 @@ html, body{
     width: 100%;
     height: 30px;
     display: flex;
+    margin-top: 15px;
 }
 
 .login-option{
     width: 33.3%;
     height: 100%;
+    font-size: 10px;
+}
+
+.login-option #forgotPass{
+    margin: 0;
+    padding: 0;
 }
 
 .login__submit {
@@ -151,8 +158,50 @@ html, body{
     width: 0;
 }
 
+.checkbox {
+    position: relative;
+    padding-left: 26px;
+    padding-top: 7px;
+    user-select: none;
+}
 
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #c9c9c9;
+    background-color: #dedbdb;
+    border-radius: 26px;
+} 
 
+.checkbox:hover input ~ .checkmark {
+    background-color: #c095c0;
+  }
+
+.checkbox input:checked ~ .checkmark {
+    background-color: #1c09ac;
+}
+
+.checkbox .checkmark:after {
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    left: 6px;
+    color: white;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+    display: block;
+} 
+   
+/*To hide the checkmark when not checked*/
+.checkmark:after {
+    content:'✓';
+    position: absolute;
+    display: none;
+} 
 
 .footer{
     height: 15%;
